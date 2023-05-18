@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if pgrep xcompmgr &>/dev/null; then
+	notify-send --icon=0 xcompmgr apagado
+	pkill xcompmgr &
+else
+	notify-send --icon=0 xcompmgr encendido
+	xcompmgr -c &
+fi
+
+exit 0

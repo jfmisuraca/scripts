@@ -1,0 +1,6 @@
+#!/bin/bash
+archivo_a_convertir=$1
+ebook-convert "$archivo_a_convertir" .epub --enable-heuristics --no-default-epub-cover &&
+	echo | neomutt -a *.epub -- misu_jf@kindle.com &&
+	trash-put "$archivo_a_convertir" &&
+	trash-put *.epub;

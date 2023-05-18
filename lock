@@ -1,0 +1,12 @@
+#!/bin/bash
+ 
+img="$HOME/.cache/i3lock.png"
+ 
+scrot ~/.cache/i3lock.png 
+convert "$img" -blur 0x4 "$img"
+i3lock -u -i "$img"
+trash-put "$img"
+
+if [ "$HOSTNAME" = "arch-notebook" ]; then 
+	brightnessctl s 5%;
+fi

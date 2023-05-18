@@ -1,0 +1,11 @@
+#!/bin/bash
+hay_cambios="$(git status --porcelain | wc -l)"
+
+if [ "$hay_cambios" -eq 0 ]; then
+    exit 0
+fi
+
+git pull -q
+git add .
+git commit -q -m "Ultima sincronizacion $(date +"%Y-%m-%d %H:%M")"
+git push -q

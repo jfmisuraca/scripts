@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo checkupdates -d || touch /home/francisco/actualizaciones_pacman_no_descargadas

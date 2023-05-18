@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$HOSTNAME" = "arch-notebook" ]; then
+    ln -sf ~/Dropbox/Aplicaciones/dotfiles/i3/arch-notebook.conf ~/.config/i3/;
+elif [ "$HOSTNAME" = "arch-retec" ]; then
+    ln -sf ~/Dropbox/Aplicaciones/dotfiles/i3/arch-retec.conf ~/.config/i3/;
+fi

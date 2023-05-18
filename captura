@@ -1,0 +1,5 @@
+#!/bin/bash
+timestamp() {
+	date +"%m-%d-%H_%M_%S"
+}
+vim -c 'startinsert' ~/Dropbox/1Inbox/"captura_$(timestamp).md"
