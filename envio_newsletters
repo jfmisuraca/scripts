@@ -1,6 +1,0 @@
-#!/bin/bash
-for file in ~/Descargas/*newsletter.pdf; 
-	do ebook-convert "$file" .epub --enable-heuristics --no-default-epub-cover; 
-	done &&
-echo | neomutt -a *.epub -- misu_jf@kindle.com && 
-trash-put ~/Descargas/*newsletter*
