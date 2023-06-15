@@ -2,10 +2,9 @@
 DATE="$(date +%Y%m%d%H%M)"
 
 sudo timeshift --create --comments "pre actualizar $DATE" --scripted &&
+topgrade --disable git_repos;
 if [ "$HOSTNAME" = "arch-retec" ]; then
-    topgrade --disable git_repos;
     sudo grub-mkconfig -o /boot/grub/grub.cfg;
 elif [ "$HOSTNAME" = "arch-notebook" ]; then
-    topgrade --disable git_repos;
-    	brightnessctl s 5%;
+    brightnessctl s 5%;
 fi
